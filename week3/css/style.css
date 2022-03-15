@@ -1,0 +1,87 @@
+body {
+    /*color: red;*/
+    font-size: 16px;
+    background: rgba(220, 220, 220, 0.8);
+}
+
+h1 {
+    /*color: red;*/ /*rgb(255, 0, 0);*/
+    background: rgba(200, 200, 200, 0.5);
+    font-size: 2.5rem;
+}
+
+a {
+  color: inherit;
+}
+
+div {
+   /* background: yellow;*/
+}
+
+#intro {
+    color: green;
+}
+
+.important {
+    color: red;
+}
+
+div.important {
+    color: purple;
+}
+
+div#intro {
+
+}
+
+.large-font {
+    font-size: 3rem;
+}
+
+div p {
+    color: cadetblue;
+}
+
+#intro p {
+
+}
+
+#intro .large-font {
+
+}
+
+.large-font p {
+
+}
+
+div > p {
+    color: aqua;
+}
+
+p + p + p {
+    color: fuchsia;
+}
+
+a:hover {
+    color: red;
+}
+
+div:hover {
+    background: aquamarine;
+}
+
+p:first-letter {
+    font-size: 100px;
+}
+
+#test-nth p, section p {
+    background: none;
+    color: black;
+}
+#test-nth:hover {
+    background: none;
+}
+
+#test-nth p:nth-of-type(2n + 1) {
+    background: gray;
+}
