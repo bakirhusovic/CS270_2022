@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    /* 0 0 2 */
+    p:first-line {
+      color: red;
+    }
+    /* 0 0 2 */
+    body p {
+      color: green;
+    }
+    /* 0 0 2 */
+    body p {
+      color: yellow;
+    }
+
+    /* 1 0 1 */
+    #ssst p {
+      color: blue;
+    }
+
+    /* 1 1 0*/
+    #ssst .purple {
+      color: purple;
+      font-size: 50px;
+    }
+
+    /* 1 1 1 */
+    #ssst p.purple {
+      color: aqua;
+    }
+
+    /* 1 0 0 */
+    #ssst {
+      background: coral;
+    }
+
+    /* 0 1 0 */
+    [id=ssst] {
+      background: gray;
+    }
+
+    #another-id {
+      background: gray !important;
+    }
+  </style>
+</head>
+<body>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet aut commodi consectetur consequuntur dignissimos dolore dolorem dolores et eveniet facere fugit id illo iste labore nam, quibusdam, sed sequi!</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab accusamus aliquam corporis cumque cupiditate dolorem doloremque facilis illo in, ipsam molestias officiis praesentium quas reiciendis sequi sit tenetur voluptatum.</p>
+<div id="ssst">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consequuntur deleniti deserunt dolore dolorem dolorum in, laboriosam, magnam necessitatibus nesciunt non officiis quia repudiandae ut veritatis voluptatibus voluptatum. Ab, nesciunt.
+  </p>
+  <p class="purple">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consequuntur deleniti deserunt dolore dolorem dolorum in, laboriosam, magnam necessitatibus nesciunt non officiis quia repudiandae ut veritatis voluptatibus voluptatum. Ab, nesciunt.
+  </p>
+</div>
+<main id="another-id" style="background: brown !important;">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut cum eius exercitationem laborum possimus, similique velit? Accusantium eligendi enim esse in necessitatibus nemo officiis vel voluptas? Doloremque, impedit quaerat.
+</main>
+</body>
+</html>
