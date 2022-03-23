@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        #grid {
+            display: grid;
+            width: 1000px;
+            margin: 0 auto;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-gap: 20px;
+            grid-template-areas: "header header header"
+                                 "content content sidebar"
+                                "footer footer footer";
+        }
+        /* 1 0  1*/
+        #grid div, #grid-2 div {
+            height: 100px;
+            background: #e5e5e5;
+        }
+        div#header {
+            background: red;
+            grid-area: header;
+        }
+        div#content {
+            background: green;
+            grid-area: content;
+        }
+        div#sidebar {
+            background: blue;
+            grid-area: sidebar;
+        }
+        div#footer {
+            background: yellow;
+            grid-area: footer;
+        }
+        #grid-2 {
+            display: grid;
+            width: 1000px;
+            margin: 20px auto 0;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-gap: 30px;
+        }
+        #grid-2 div {
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .last-column {
+            grid-column: span 1 / -1;
+        }
+        .col-span-2 {
+            grid-column: span 2 / span 2;
+            /*grid-column-start: span 2;
+            grid-column-end: span 2;*/
+        }
+        div#item-1 {
+            grid-column: 1 / 4;
+        }
+        div#item-2 {
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+    <div id="grid">
+        <div id="header">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+        <div id="content"></div>
+        <div id="sidebar"></div>
+        <div id="footer"></div>
+        <div></div>
+    </div>
+
+    <div id="grid-2">
+        <div id="item-1">1</div>
+        <div id="item-2">2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+</html>
