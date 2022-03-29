@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            display: flex;
+            width: 50%;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: space-around;
+            /*flex-direction: column;*/
+            height: 500px;
+            /*flex-wrap: wrap;*/
+        }
+        p {
+            width: 1000px;
+            flex-shrink: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 1000px;
+            margin: 0 auto;
+        }
+        header h1 {
+            /*margin: 0;*/
+        }
+        main {
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+            margin-bottom: 100px;
+        }
+        main section {
+            width: 700px;
+            background: black;
+            color: white;
+        }
+        main aside {
+            width: 300px;
+            background: gray;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            Title
+        </h1>
+        <nav>
+            <a href="#">Item</a>
+            <a href="#">Item</a>
+            <a href="#">Item</a>
+            <a href="#">Item</a>
+        </nav>
+    </header>
+    <div>
+        <h1>Hello</h1>
+        <h1>Hello</h1>
+        <nav>
+            <a href="#">Item</a>
+            <a href="#">Item</a>
+            <a href="#">Item</a>
+            <a href="#">Item</a>
+        </nav>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam quaerat temporibus ut. Cupiditate dicta dolore ea esse eum facere, laboriosam laudantium minus molestias nesciunt obcaecati odio reiciendis rerum tempore vel.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequatur deleniti eius error excepturi explicabo illo iure iusto, minima nemo nesciunt nulla pariatur quam sint, tempora totam vel veniam vero.
+        </p>
+    </div>
+<main>
+    <section>
+        Section
+    </section>
+    <aside>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam assumenda delectus omnis possimus quae, rerum tenetur! Doloremque eos et hic illum nobis perspiciatis, provident quam quod sequi tempora, vero!
+    </aside>
+</main>
+</body>
+</html>

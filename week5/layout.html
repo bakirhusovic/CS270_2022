@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            color: inherit;
+        }
+        #grid {
+            display: grid;
+            width: 1200px;
+            margin: auto;
+            grid-template-columns: 800px 400px;
+        }
+        header, footer {
+            grid-column: 1 / 3;
+        }
+        header {
+            background-color: black;
+            padding: 50px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+<div id="grid">
+    <header>
+        <h1>Title</h1>
+        <nav>
+            <a href="#">Item 1</a>
+            <a href="#">Item 2</a>
+            <a href="#">Item 3</a>
+            <a href="#">Item 4</a>
+            <a href="#">Item 5</a>
+        </nav>
+    </header>
+
+    <section>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores delectus doloribus error, est facere impedit magnam maiores modi nihil nobis nostrum quo repellat sapiente sit sunt ullam vel, velit.
+    </section>
+    <div>
+        <aside>
+            <ul>
+                <li>Item</li>
+            </ul>
+        </aside>
+        <aside>
+            <ol>
+                <li>Item</li>
+            </ol>
+        </aside>
+    </div>
+
+    <footer>
+        &copy;
+    </footer>
+</div>
+</body>
+</html>
