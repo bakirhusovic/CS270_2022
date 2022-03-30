@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Mobile</title>
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                width: 100px;
+                height: 100px;
+                background: black;
+                color: white;
+            }
+
+            main {
+                width: 1000px;
+                margin: 20px auto;
+                background: black;
+                color: white;
+            }
+
+            @media all and (max-width: 700px) and (min-width: 300px) {
+                div {
+                    background: red;
+                }
+
+                main {
+                    box-sizing: border-box;
+                    width: 100%;
+                    padding: 0 10px;
+                }
+                .hidden-mobile {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div>A</div>
+        <main class="hidden-mobile">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate debitis, dignissimos ea fugit inventore vel? Accusamus deserunt magnam officiis quos tempora! Animi eaque fuga repudiandae. Est ex iste sit.
+        </main>
+    </body>
+</html>
