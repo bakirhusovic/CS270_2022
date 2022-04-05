@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            background: red;
+            height: 200px;
+            border-radius: 100%;
+            box-shadow: 150px 150px 0 yellow;
+        }
+        div:hover {
+            /*transform: scale(1.1);*/
+            transform: translate(100px, 100px);
+            transition: all ease-in 3s;
+        }
+        h1 {
+            text-shadow: 100px 5px 10px red;
+
+        }
+
+        a {
+            display: inline-block;
+            padding: 20px;
+            background: black;
+            transition: background-color ease-in 0.3s;
+        }
+
+        a:hover {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello</h1>
+    <div>
+        hello
+    </div>
+    <a href="#">item</a>
+</body>
+</html>

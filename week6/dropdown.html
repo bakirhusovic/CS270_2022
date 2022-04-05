@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            color: inherit;
+        }
+        header {
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+        ul {
+            list-style-type: none;
+        }
+
+        #main-menu li {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: red;
+            width: 200px;
+            display: none;
+            z-index: 9999;
+        }
+        .dropdown li {
+          display: block;
+        }
+
+        ul li:hover .dropdown {
+            display: block;
+        }
+        p {
+            background: white;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="main-menu">
+            <ul>
+                <li>
+                    <a href="#">Item 1</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Subitem 1</a></li>
+                        <li><a href="#">Subitem 2</a></li>
+                        <li><a href="#">Subitem 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Item 1</a>
+                    <div class="dropdown">
+                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ducimus, ea iure, maxime nobis, porro possimus quis quisquam sint suscipit totam vero! Alias autem dolorem fugit illum nihil perferendis, recusandae.
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci eligendi est facilis fuga in laboriosam laborum laudantium molestiae omnis optio provident, quam, quasi, sequi voluptatum? Consequuntur exercitationem necessitatibus soluta!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci eligendi est facilis fuga in laboriosam laborum laudantium molestiae omnis optio provident, quam, quasi, sequi voluptatum? Consequuntur exercitationem necessitatibus soluta!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci eligendi est facilis fuga in laboriosam laborum laudantium molestiae omnis optio provident, quam, quasi, sequi voluptatum? Consequuntur exercitationem necessitatibus soluta!
+    </p>
+</body>
+</html>
