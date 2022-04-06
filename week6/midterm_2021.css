@@ -5,10 +5,12 @@
 
 a {
     color: inherit;
+    text-decoration: none;
 }
 
 body {
     background: #F9FAFB;
+    font-family: Roboto;
 }
 
 header, footer {
@@ -19,6 +21,17 @@ header, footer {
 header {
     padding: 30px 0;
     text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+nav a {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: #064E3B;
 }
 
 header .wrapper {
@@ -30,10 +43,13 @@ header .wrapper {
 header h1 {
     order: 2;
     letter-spacing: 10px;
+    color: #064E3B;
 }
 
 footer {
+    margin-top: 80px;
     text-align: center;
+    padding: 30px 0;
 }
 
 .wrapper {
@@ -54,6 +70,7 @@ main section {
 
 main aside {
     padding-right: 20px;
+    padding-top: 30px;
 }
 
 section img {
@@ -61,4 +78,85 @@ section img {
     float: left;
     margin-right: 10px;
     margin-bottom: 10px;
+    border-radius: 0 30px 30px 0;
+    /* property animation type duration delay*/
+    /*transition: border-radius ease-in-out 0.3s 2s;*/
+    transition: border-radius ease-in-out 0.3s;
+}
+
+section img:hover {
+    border-radius: 30px 0 0 30px;
+}
+
+section h2 {
+    margin-bottom: 15px;
+}
+
+section p {
+    margin-bottom: 10px;
+    text-align: justify;
+    line-height: 25px;
+}
+
+aside {
+    font-style: italic;
+}
+
+aside ul {
+    margin: 10px 0;
+}
+
+aside ul, aside ol {
+    margin-left: 30px;
+}
+
+section a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #047857;
+    color: white;
+    border-radius: 5px;
+    transition: all ease-in 3s;
+}
+
+section a:hover {
+    background: red;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    main section {
+        flex-basis: 100%;
+    }
+
+    main {
+        /*flex-wrap: wrap;*/
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    main aside {
+        order: 2;
+    }
+
+    section img {
+        width: 100%;
+        border-radius: 0;
+    }
+    section img:hover {
+        border-radius: 0;
+    }
+    h2 {
+        text-align: center;
+    }
+
+    header nav {
+        order: 2;
+        margin-top: 20px;
+    }
 }
