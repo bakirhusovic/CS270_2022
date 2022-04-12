@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="formHandling.php">
+        <div>
+            <label for="first_name">First name</label>
+            <input id="first_name" name="first_name" type="text" required autofocus>
+        </div>
+        <div>
+            <input name="age" type="number" step="5" min="10" max="100">
+        </div>
+        <div>
+            <input name="image" type="file">
+        </div>
+        <div>
+            <input name="dob" type="date" readonly>
+        </div>
+        <div>
+            <input name="email" type="email" disabled>
+        </div>
+        <div>
+            <input name="password" type="password">
+        </div>
+        <div>
+            <label for="content-test">Content</label>
+            <textarea name="content" id="content-test" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <label for="category">Category</label>
+            <select name="category" id="category">
+                <option value="1">Category 1</option>
+                <option value="2">Category 2</option>
+                <option value="3">Category 3</option>
+            </select>
+        </div>
+        <div>
+            <label for="category-2">Category 2</label>
+            <input type="checkbox" name="category-checkbox[]" id="category-2" value="1">
+            <br>
+            <label for="category-3">Category 3</label>
+            <input type="checkbox" name="category-checkbox[]" id="category-3" value="2">
+            <br>
+        </div>
+        <div>
+            <label for="category-12">Category 2</label>
+            <input type="radio" name="category-radio" id="category-12" value="1">
+            <br>
+            <label for="category-13">Category 3</label>
+            <input type="radio" name="category-radio" id="category-13" value="2">
+            <br>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
