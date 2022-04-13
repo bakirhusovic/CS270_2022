@@ -17,6 +17,8 @@
 
         var_dump($arrayTest);
 
+        strlen($test);
+
         $a = 0;
 
 
