@@ -97,7 +97,7 @@ main {
     margin-top: 30px;
     margin-bottom: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
 }
 
@@ -135,3 +135,56 @@ article p {
 #gradient_box {
     background: linear-gradient(to bottom, #61516a, #bd8961);
 }
+
+@media all and (max-width: 500px) {
+    #wrapper {
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    section {
+        flex-direction: column-reverse;
+    }
+
+   /* #first_column {
+        order: 2;
+    }*/
+
+    #second_column {
+        margin-top: 20px;
+        /*order: 1;*/
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    header nav a {
+        margin-left: 0;
+        font-size: 14px;
+    }
+
+    header nav {
+        white-space: nowrap;
+        overflow-x: auto;
+        width: 80%;
+        margin: 20px auto 0;
+    }
+}
+
+/*
+@media screen and (min-width: 500px) and (max-width: 900px) {
+    #wrapper {
+        width: 800px;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+*/
