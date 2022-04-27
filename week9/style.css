@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #E5E7EB;
+    font-family: Ubuntu;
+}
+
+#dark-blue-gray {
+    background: #111827;
+    color: white;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+header, #dark-blue-gray section.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+nav a:hover {
+   color: #D1D5DB;
+}
+
+header h1 {
+    letter-spacing: 10px;
+}
+
+header > a {
+    background: #4B5563;
+    padding: 12px 20px;
+    border-radius: 5px;
+}
+
+section.wrapper h2 {
+    font-size: 70px;
+    color: #22d3ee;
+}
+
+section.wrapper h2:first-line {
+    color: white;
+}
+
+main {
+    margin-top: 30px;
+}
+
+main h3 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+main section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
+}
+
+section article {
+    background: white;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+section article p {
+    margin-top: 10px;
+    line-height: 24px;
+    color: #858688;
+}
+
+footer.wrapper {
+    margin-top: 30px;
+    border-top: 1px solid #858688;
+    padding: 30px 0;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 600px) {
+    .wrapper {
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    img, header > a {
+        display: none;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    section.wrapper h2 {
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+    main section {
+        grid-template-columns: 1fr;
+        row-gap: 15px;
+    }
+}
