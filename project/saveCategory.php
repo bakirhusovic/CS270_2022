@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     mysqli_query($conn, "insert into categories (name) values ('{$name}')");
 
-
+    header('Location: categoryList.php');
 } else {
     echo 'Forbidden';
 }

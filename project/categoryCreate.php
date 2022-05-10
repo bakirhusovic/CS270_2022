@@ -1,19 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <?php
+    $title = 'Create a new category';
+    include('includes/head.php');
+    ?>
 </head>
 <body>
-<form action="saveCategory.php" method="POST">
-    <div>
-        <label for="name">Name</label>
-        <input type="text" name="category_name" id="name">
-    </div>
-    <button type="submit">Save</button>
-</form>
+<div class="wrapper">
+    <a href="categoryList.php">Back to categories</a>
+    <form action="saveCategory.php" method="POST">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="category_name" id="name">
+        </div>
+        <button type="submit">Save</button>
+    </form>
+</div>
 </body>
 </html>
