@@ -15,13 +15,13 @@ if (!$category) {
 <html lang="en">
 <head>
     <?php
-    include('includes/head.php');
+    include('../../includes/head.php');
     ?>
 </head>
 <body>
-<a href="categoryList.php">Back to categories</a>
+<a href="/admin/categories">Back to categories</a>
 
-<form action="updateCategory.php?id=<?= $category['id'] ?>" method="POST">
+<form action="update.php?id=<?= $category['id'] ?>" method="POST">
     <input type="hidden" name="id" value="<?= $category['id'] ?>">
     <div>
         <label for="name">Name</label>

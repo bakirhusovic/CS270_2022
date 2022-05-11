@@ -3,16 +3,16 @@
 <head>
     <?php
     $title = 'Create a new category';
-    include('includes/head.php');
+    include('../../includes/head.php');
     ?>
 </head>
 <body>
 <div class="wrapper">
-    <a href="categoryList.php">Back to categories</a>
-    <form action="saveCategory.php" method="POST">
+    <a href="index.php">Back to categories</a>
+    <form action="save.php" method="POST">
         <div>
             <label for="name">Name</label>
-            <input type="text" name="category_name" id="name">
+            <input type="text" name="category_name" id="name" required>
         </div>
         <button type="submit">Save</button>
     </form>

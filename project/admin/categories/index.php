@@ -21,12 +21,12 @@ $query = mysqli_query($conn, 'select id, name as category_name from categories')
 <head>
     <?php
     $title = 'Categories';
-    include('includes/head.php');
+    include('../../includes/head.php');
     ?>
 </head>
 <body>
     <div class="wrapper">
-        <a href="categoryCreate.php">Create a new category</a>
+        <a href="/admin/categories/create.php">Create a new category</a>
 
         <table>
             <thead>
@@ -43,8 +43,8 @@ $query = mysqli_query($conn, 'select id, name as category_name from categories')
                 <tr>
                     <td><?= $category['id'] ?></td>
                     <td><?= $category['category_name'] ?></td>
-                    <td><a href="categoryEdit.php?id=<?= $category['id'] ?>">Edit</a></td>
-                    <td><a href="categoryDelete.php?id=<?= $category['id'] ?>">Delete</a></td>
+                    <td><a href="/admin/categories/edit.php?id=<?= $category['id'] ?>">Edit</a></td>
+                    <td><a href="/admin/categories/delete.php?id=<?= $category['id'] ?>">Delete</a></td>
                 </tr>
             <?php endwhile; ?>
             </tbody>
