@@ -1,5 +1,7 @@
 <?php
 
+require('../../includes/checkLogged.php');
+
 $conn = mysqli_connect('localhost', 'wls', 'local', 'cs270_2022');
 
 $query = mysqli_query($conn, 'select * from categories where id = ' . $_GET['id']);

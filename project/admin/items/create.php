@@ -1,5 +1,7 @@
 <?php
 
+require('../../includes/checkLogged.php');
+
 require_once('../../includes/mysql.php');
 
 $query = mysqli_query($conn, 'select * from categories');

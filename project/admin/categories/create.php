@@ -1,3 +1,8 @@
+<?php
+
+require('../../includes/checkLogged.php');
+
+?>
 <!doctype html>
 <html lang="en">
 <head>

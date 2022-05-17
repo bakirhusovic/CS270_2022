@@ -1,5 +1,7 @@
 <?php
 
+require('../../includes/checkLogged.php');
+
 require_once('includes/mysql.php');
 
 $query = mysqli_query($conn, "UPDATE categories set name = '" . $_POST['category_name'] . "' where id = " . $_GET['id']);

@@ -1,5 +1,7 @@
 <?php
 
+require('../../includes/checkLogged.php');
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['category_name'] ?? '';
     /*$name = isset($_POST['category_name']) ? $_POST['category_name'] : '';
