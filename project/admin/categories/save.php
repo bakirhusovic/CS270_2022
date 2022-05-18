@@ -10,11 +10,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         $name = '';
     }*/
+    $userId = $_SESSION['user_id'];
 
     if (!empty($name)) {
         require_once('../../includes/mysql.php');
 
-        mysqli_query($conn, "insert into categories (name) values ('{$name}')");
+        mysqli_query($conn, "insert into categories (name, user_id) values ('{$name}', {$userId})");
 
         header('Location: /admin/categories');
     } else {

@@ -15,7 +15,7 @@ try {
 
 mysqli_select_db($conn, 'cs270_2022');
 
-$query = mysqli_query($conn, 'select a.id, a.name, a.price, a.description, b.name as category_name from items a, categories b where a.category_id = b.id');
+$query = mysqli_query($conn, 'select a.id, a.name, a.image, a.price, a.description, b.name as category_name from items a, categories b where a.category_id = b.id');
 
 ?>
 <!doctype html>
@@ -34,6 +34,7 @@ $query = mysqli_query($conn, 'select a.id, a.name, a.price, a.description, b.nam
             <thead>
             <tr>
                 <th>#</th>
+                <th>Image</th>
                 <th>Name</th>
                 <th>Description</th>
                 <th>Price</th>
@@ -47,6 +48,7 @@ $query = mysqli_query($conn, 'select a.id, a.name, a.price, a.description, b.nam
             while ($category = mysqli_fetch_assoc($query)): ?>
                 <tr>
                     <td><?= $category['id'] ?></td>
+                    <td><img src="/file.php?filename=<?= $category['image'] ?>" alt="<?= $category['name'] ?>"></td>
                     <td><?= $category['name'] ?></td>
                     <td><?= nl2br($category['description']) ?></td>
                     <td><?= number_format($category['price'], 2) ?></td>

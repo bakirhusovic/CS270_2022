@@ -1,31 +1,27 @@
 <?php
+ session_start();
 
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
+ require_once('includes/mysql.php');
 
-try {
-    $conn = mysqli_connect('localhost', 'wls', 'local', 'cs270_2022');
-} catch (Exception $e) {
-    /*echo 'Cannot connect to the database';
-    exit;*/
-    die('Cannot connect to the database');
-}
-
-mysqli_select_db($conn, 'cs270_2022');
-
-$query = mysqli_query($conn, 'select id, name as category_name from categories');
-
-while ($test = mysqli_fetch_assoc($query)) {
-    echo $test['id'] . ' ' . $test['category_name'] . '<br>';
-}
-
-while ($row = mysqli_fetch_array($query)) {
-    echo $row[1];
-}
-
-/*if (mysqli_query($conn, "insert into categories (name) values ('test category')")) {
-    echo 'Success';
-} else {
-    echo 'An error has occured';
-}*/
-
+ $categoriesQuery = mysqli_query($conn, 'select a.id, a.name, count(b.id) as num_of_items from categories a, items b where a.id = b.category_id group by a.id, a.name order by count(b.id) desc limit 5');
+ $itemsQuery = mysqli_query($conn, 'select * from items order by id desc limit 5');
+?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <?php while($category = mysqli_fetch_assoc($categoriesQuery)): ?>
+        <div><?= $category['name'] ?> (<?= $category['num_of_items'] ?> items)</div>
+    <?php endwhile; ?>
+    <h2>Items</h2>
+    <?php while($item = mysqli_fetch_assoc($itemsQuery)): ?>
+        <div><?= $item['name'] ?></div>
+    <?php endwhile; ?>
+</body>
+</html>

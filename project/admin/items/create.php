@@ -17,7 +17,11 @@ $query = mysqli_query($conn, 'select * from categories');
 <body>
 <div class="wrapper">
     <a href="index.php">Back to items</a>
-    <form action="save.php" method="POST">
+    <form action="save.php" method="POST" enctype="multipart/form-data">
+        <div>
+            <label for="image">Image</label>
+            <input type="file" name="image" id="image" required accept="image/*">
+        </div>
         <div>
             <label for="name">Name</label>
             <input type="text" name="name" id="name" required>

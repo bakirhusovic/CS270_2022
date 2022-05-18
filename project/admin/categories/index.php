@@ -15,7 +15,7 @@ try {
 
 mysqli_select_db($conn, 'cs270_2022');
 
-$query = mysqli_query($conn, 'select id, name as category_name from categories');
+$query = mysqli_query($conn, 'select a.id, a.name as category_name, b.first_name, b.last_name from categories a left join users b on a.user_id = b.id');
 
 ?>
 <!doctype html>
@@ -35,6 +35,7 @@ $query = mysqli_query($conn, 'select id, name as category_name from categories')
             <tr>
                 <th>#</th>
                 <th>Name</th>
+                <th>Author</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
@@ -45,6 +46,7 @@ $query = mysqli_query($conn, 'select id, name as category_name from categories')
                 <tr>
                     <td><?= $category['id'] ?></td>
                     <td><?= $category['category_name'] ?></td>
+                    <td><?= $category['first_name'] ?> <?= $category['last_name'] ?></td>
                     <td><a href="/admin/categories/edit.php?id=<?= $category['id'] ?>">Edit</a></td>
                     <td><a href="/admin/categories/delete.php?id=<?= $category['id'] ?>">Delete</a></td>
                 </tr>
