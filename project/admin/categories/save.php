@@ -17,6 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         mysqli_query($conn, "insert into categories (name, user_id) values ('{$name}', {$userId})");
 
+        $categoryId = mysqli_insert_id($conn);
+        mysqli_query($conn, "insert into items (name, description, price, category_id, user_id) values ('Default item', 'N/A', 0, {$categoryId}, {$userId})");
         header('Location: /admin/categories');
     } else {
         die('Name cannot be empty');

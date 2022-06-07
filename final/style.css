@@ -1,0 +1,30 @@
+p + p
+
+.p
+
+#p
+
+div div
+div > div
+
+div > .div
+
+input[type="submit"]
+img[alt]
+
+[title]
+
+#test p + a [title],
+
+header.test
+
+header:nth-of-type(2n)
+
+
+
+<p>Test</p>
+<div class="p">Test</div>
+<p>Test</p>
+<p>Test</p>
+<p class="p">Test</p>
+<p id="p">Test</p>

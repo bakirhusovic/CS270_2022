@@ -13,9 +13,11 @@ try {
     die('Cannot connect to the database');
 }
 
+$categoryId = $_GET['category_id'];
+
 mysqli_select_db($conn, 'cs270_2022');
 
-$query = mysqli_query($conn, 'select a.id, a.name, a.image, a.price, a.description, b.name as category_name from items a, categories b where a.category_id = b.id');
+$query = mysqli_query($conn, 'select a.id, a.name, a.image, a.price, a.description, b.name as category_name from items a, categories b where a.category_id = b.id and a.category_id = ' . $categoryId);
 
 ?>
 <!doctype html>

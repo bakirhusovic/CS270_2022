@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="test">Hello</h1>
+    <script>
+        console.log('Hello')
+        let counter = sessionStorage.getItem('test');
+
+        if (!counter) {
+            counter = 0;
+        }
+
+        let test = document.getElementById('test');
+        test.innerHTML = '<span>' + counter + '</span>';
+        console.log(test);
+        test.style.backgroundColor = 'yellow';
+        sessionStorage.setItem('test', parseInt(counter) + 1);
+
+    </script>
+</body>
+</html>
